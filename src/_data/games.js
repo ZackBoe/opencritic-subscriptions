@@ -1,23 +1,10 @@
 require('dotenv').config()
 const fetch = require('node-fetch');
 
-// module.exports = async function() {
-//   let data = await fetchSubscriptions()
-//   // let data = [{"xbox-game-pass-ultimate":{"name":"Xbox Game Pass Ultimate","items":[]},"xbox-game-pass-xbox":{"name":"Xbox Game Pass (Xbox)","items":[]},"xbox-game-pass-pc":{"name":"Xbox Game Pass (PC)","items":[]},"origin-access-basic-pc":{"name":"Origin Access Basic (PC)","items":[]},"origin-access-premier-pc":{"name":"Origin Access Premier (PC)","items":[]},"ea-access-xbox":{"name":"EA Access (Xbox)","items":[]},"ea-access-ps4":{"name":"EA Access (PS4)","items":[]},"ps-now":{"name":"PS Now","items":[]},"uplay-plus":{"name":"Uplay+","items":[]}}]
-//   return data;
-// };
-
-
-
 module.exports = async () => {
-  
-
   let data = await fetchSubscriptions()
   return data
-    
-  
 }
-
 
 async function fetchSubscriptions() {
   
@@ -32,15 +19,12 @@ async function fetchSubscriptions() {
       sub.items = items
       console.log(`${sub.label} -  ${sub.items.length}`)
       return sub
-      
-
     }))
 
     return data
   })
   
   return results
-  
 }
 
 async function getGames(key, offset = 0, items) {
@@ -54,6 +38,4 @@ async function getGames(key, offset = 0, items) {
       return getGames(key, offset+20, items)
     } else return items
   })
-  
-  
 }
