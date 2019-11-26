@@ -45,7 +45,8 @@ module.exports = function(config) {
   // eleventyConfig.setLibrary("njk", nunjucksEnvironment);
 
   config.addPassthroughCopy('src/css');
-  // config.addPassthroughCopy('dist/assets');
+  config.addPassthroughCopy('netlify.toml', '')
+  config.addPassthroughCopy('_redirects', '')
   config.setUseGitIgnore(false);
 
   return {
