@@ -46,6 +46,11 @@ ul.subscriptions li {
   padding: 10px 0;
 }
 
+ul.subscriptions li span {
+  color: #94a1b2;
+  font-size: 1.7rem;
+}
+
 ul.subscriptions a {
   text-decoration: none;
 }

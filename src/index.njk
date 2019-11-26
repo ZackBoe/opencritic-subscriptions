@@ -12,7 +12,7 @@
 <ul class="subscriptions">
 
 {% for sub in games %}
-  <li><a href="/subscription/{{sub.key}}">{{ sub.label }} ({{ sub.items.length }})</a></li>
+  <li><a href="/subscription/{{sub.key}}">{{ sub.label }} <span>{{ sub.items.length }}</span></a></li>
 {% endfor %}
 
 </ul>
