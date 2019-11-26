@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="no-js">
+<head>
+  <title>
+      {%- if title -%}
+          {{ title }} &middot; {{ site.title }}
+      {%- else -%}
+          {{ site.title }} &middot; {{ site.description }}
+      {%- endif -%}
+  </title>
+  <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="Eleventy">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% if site.icon %}
+      <link rel="shortcut icon" type="image/png" href="{{ site.icon }}"/>
+  {% endif %}
+
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <link href="/css/normalize.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css">
+  {{ css | safe if css }}
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body class="{{ bodyClass }}">
+
+  <main class="wrapper">
+
+    {% block content %}
+    {% endblock content %}
+
+  </main>
+  
+  {{ js | safe if js }}
+
+  <footer class="wrapper">
+  <p><a href="https://github.com/ZackBoe/opencritic-subscriptions">Quick project</a> by <a href="https://zackboe.hm">Zack Boehm</a> to list all game subscription items on a single page</p>
+  <p>Last built on {{ site.build }} thanks to game data via <a href="https://opencritic.com/">OpenCritic</a>. </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.wrapper {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+main.wrapper {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  color: white;
+  background: #16161a;
+}
+
+a {
+  color: inherit;
+}
+
+header h1 {
+  color: #3da9fc;
+}
+
+ul.subscriptions {
+  margin: 20px 0;
+  padding: 0;
+  font-size: 2rem;
+  list-style-type: none;
+}
+
+ul.subscriptions li {
+  padding: 10px 0;
+}
+
+ul.subscriptions a {
+  text-decoration: none;
+}
+ul.subscriptions a:hover {
+  color: #2cb67d;
+}
+
+footer {
+  color: #94a1b2;
+}
+
+li.game {
+  padding: 5px 0;
+}
+

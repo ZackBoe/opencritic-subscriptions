@@ -1,0 +1,5 @@
+[dev]
+  command = "npm run serve"
+
+[build.processing.html]
+  pretty_urls = true

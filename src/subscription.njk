@@ -1,0 +1,23 @@
+---
+pagination:
+  data: games
+  alias: subscription
+  size: 1
+permalink: "subscription/{{ subscription.key | slug }}/"
+---
+{% extends 'layouts/default.njk' %}
+{% set title = subscription.label %}
+
+{% block content %}
+
+<header>
+<h1>All games included with {{subscription.label}}</h1>
+</header>
+
+{% for game in subscription.items %}
+  {% include "partials/game.njk" %}
+{% endfor %}
+
+
+
+{% endblock %}

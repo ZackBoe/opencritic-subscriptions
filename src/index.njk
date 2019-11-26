@@ -1,0 +1,31 @@
+{# {{ discover.data | dump | safe }} #}
+{% extends 'layouts/default.njk' %}
+
+{% set title = 'Game Subscriptions' %}
+
+
+{% set css %}
+{% endset %}
+
+
+
+{% block content %}
+{# {{ games | dump | safe }} #}
+
+<header>
+  <h1>OpenCritic Single Page Game Subscription Services</h1>
+</header>
+
+<ul class="subscriptions">
+
+{% for sub in games %}
+  <li><a href="/subscription/{{sub.key}}">{{ sub.label }} ({{ sub.items.length }})</a></li>
+{% endfor %}
+
+</ul>
+
+
+
+{% endblock %}
+{% set js %}
+{% endset %}
